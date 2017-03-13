@@ -21,12 +21,19 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
         super.didReceiveMemoryWarning()
     }
     
-
+    var selectedImage = UIImage()
     func selectImage(_ image: UIImage) {
         //The image being selected is passed in as "image".
+        print("clicked image: " + String(describing: image))
+        selectedImage = image
+        performSegue(withIdentifier: "segueToFeeds", sender: nil)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? FeedsViewController {
+            destinationVC.selectedImage = selectedImage
+        }
+    }
     
     //DON'T MODIFY CODE HERE AND BELOW!
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
