@@ -9,12 +9,18 @@
 import Foundation
 import UIKit
 
-class FeedsViewController: UIViewController{ //UICollectionViewDataSource, UICollectionViewDelegate {
+class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var testImage: UIImageView!
+    //selected image is from past view
     var selectedImage:UIImage? = nil
+    @IBOutlet weak var feedsTableView: UITableView!
+    @IBOutlet weak var selectedFeedLabel: UILabel!
+    var selectedFeed:String? = nil;
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        feedsTableView.delegate = self
+        feedsTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,5 +30,22 @@ class FeedsViewController: UIViewController{ //UICollectionViewDataSource, UICol
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return threadNames.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "feedPrototype",
+            for: indexPath) as! feedCell
+        
+        cell.feedLabel.text = threadNames[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedFeed = threadNames[indexPath.row]
+        selectedFeedLabel.text = "Posting to feed: " + selectedFeed!
     }
 }
