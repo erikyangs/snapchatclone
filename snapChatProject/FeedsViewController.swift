@@ -48,4 +48,22 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
         selectedFeed = threadNames[indexPath.row]
         selectedFeedLabel.text = "Posting to feed: " + selectedFeed!
     }
+    
+    @IBAction func postButtonPressed(_ sender: UIButton) {
+        if (selectedFeed==nil){
+            return
+        }
+        else{
+            print("Posting image " + String(describing:selectedImage!) + " to feed: " + selectedFeed!)
+            postAlert(msg: "Image successfully posted to feed: " + selectedFeed!)
+        }
+    }
+    
+    func postAlert(msg: String){
+        let alertController = UIAlertController(title: msg, message:
+            nil, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Post Another Image", style: UIAlertActionStyle.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

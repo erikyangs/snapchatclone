@@ -182,6 +182,9 @@
                                     <constraint firstAttribute="height" constant="25" id="ixO-We-FSX"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="goButton"/>
+                                <connections>
+                                    <action selector="postButtonPressed:" destination="vlp-Li-GTK" eventType="touchUpInside" id="3CJ-oG-TTI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,7 +207,6 @@
                         <outlet property="feedsTableView" destination="aPh-js-Kud" id="Izs-AG-TSk"/>
                         <outlet property="selectedFeedLabel" destination="4A3-f1-NA7" id="ve6-V0-bOh"/>
                         <outlet property="testImage" destination="Mpe-0F-W7O" id="P9J-GY-zti"/>
-                        <segue destination="w7l-kw-oER" kind="show" identifier="segueToLast" id="6KM-ZX-Eh6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nly-Of-Nn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
