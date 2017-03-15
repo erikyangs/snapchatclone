@@ -55,6 +55,10 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         else{
             print("Posting image " + String(describing:selectedImage!) + " to feed: " + selectedFeed!)
+            //store in model
+            threads[selectedFeed!]?.append(ImagePost(postImage: selectedImage!, postDate: NSDate(), postSeen: false, postPoster: "Erik Yang"))
+            //print("Threads currently: " + String(describing:threads))
+            //alert
             postAlert(msg: "Image successfully posted to feed: " + selectedFeed!)
         }
     }
@@ -62,8 +66,12 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     func postAlert(msg: String){
         let alertController = UIAlertController(title: msg, message:
             nil, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Post Another Image", style: UIAlertActionStyle.default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Post Another Image", style: UIAlertActionStyle.default,handler: returnToImagePicker))
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func returnToImagePicker(alert: UIAlertAction!){
+        performSegue(withIdentifier: "segueToImages", sender: nil)
     }
 }

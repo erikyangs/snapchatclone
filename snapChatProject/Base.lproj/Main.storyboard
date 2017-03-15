@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,6 +22,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="TDy-vm-HOI" kind="relationship" relationship="viewControllers" id="Aaa-2E-LvY"/>
+                        <segue destination="Rx1-6r-XcS" kind="relationship" relationship="viewControllers" id="ZVU-S8-B6d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfe-rh-Z65" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -59,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-QR-9eI">
-                                <rect key="frame" x="0.0" y="89" width="375" height="529"/>
+                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="EQS-2O-DNj">
                                     <size key="itemSize" width="236" height="203"/>
@@ -128,27 +130,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mpe-0F-W7O">
-                                <rect key="frame" x="16" y="536.5" width="68" height="59"/>
+                                <rect key="frame" x="16" y="585.5" width="68" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="L5l-qt-pFJ"/>
                                     <constraint firstAttribute="height" constant="59" id="b0n-SQ-ct1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Preview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5D-Oe-ivn">
-                                <rect key="frame" x="9" y="598.5" width="82.5" height="14.5"/>
+                                <rect key="frame" x="9" y="647.5" width="82.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-js-Kud">
-                                <rect key="frame" x="16" y="94" width="343" height="432.5"/>
+                                <rect key="frame" x="16" y="50" width="343" height="525.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedPrototype" id="tRS-Yv-DTS" customClass="feedCell" customModule="snapChatProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tRS-Yv-DTS" id="vYz-yo-iwN">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIH-sQ-dK4">
@@ -170,13 +172,13 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posting to feed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4A3-f1-NA7">
-                                <rect key="frame" x="104" y="558" width="102" height="17"/>
+                                <rect key="frame" x="104" y="607" width="102" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-0y-IfB">
-                                <rect key="frame" x="324" y="553.5" width="25" height="25"/>
+                                <rect key="frame" x="324" y="602.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="Oo1-cU-mqk"/>
                                     <constraint firstAttribute="height" constant="25" id="ixO-We-FSX"/>
@@ -207,16 +209,34 @@
                         <outlet property="feedsTableView" destination="aPh-js-Kud" id="Izs-AG-TSk"/>
                         <outlet property="selectedFeedLabel" destination="4A3-f1-NA7" id="ve6-V0-bOh"/>
                         <outlet property="testImage" destination="Mpe-0F-W7O" id="P9J-GY-zti"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueToImages" id="iTw-7O-pzC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nly-Of-Nn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="-425.03748125937034"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="RaM-Mb-dTv">
+            <objects>
+                <navigationController id="Rx1-6r-XcS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="feed" id="djm-qZ-DY2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O4e-JW-J8K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="w7l-kw-oER" kind="relationship" relationship="rootViewController" id="AMB-8u-qFO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8v-fm-3MY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="343"/>
+        </scene>
+        <!--Posts View Controller-->
         <scene sceneID="8QM-3q-QiU">
             <objects>
-                <viewController id="w7l-kw-oER" sceneMemberID="viewController">
+                <viewController id="w7l-kw-oER" customClass="PostsViewController" customModule="snapChatProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="irX-dZ-Fdl"/>
                         <viewControllerLayoutGuide type="bottom" id="OMv-Rv-I4S"/>
@@ -225,24 +245,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="last view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkY-CO-zS7">
-                                <rect key="frame" x="148" y="312" width="168" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1S2-kG-sJw">
+                                <rect key="frame" x="26" y="74" width="323" height="534"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postProto" id="Zbu-Mb-y2r" customClass="postCell" customModule="snapChatProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="323" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zbu-Mb-y2r" id="ZQ8-8e-MVb">
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZN-UO-esu">
+                                                    <rect key="frame" x="50" y="1" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unread" translatesAutoresizingMaskIntoConstraints="NO" id="KrN-PB-joI">
+                                                    <rect key="frame" x="13" y="5" width="27" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="KrN-PB-joI" secondAttribute="height" multiplier="1:1" id="OXG-Nu-hr1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time posted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOQ-8J-7sS">
+                                                    <rect key="frame" x="50" y="22" width="62.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KrN-PB-joI" secondAttribute="bottom" constant="3" id="2fw-hC-aK1"/>
+                                                <constraint firstItem="fOQ-8J-7sS" firstAttribute="leading" secondItem="AZN-UO-esu" secondAttribute="leading" id="Esl-gE-VeV"/>
+                                                <constraint firstItem="fOQ-8J-7sS" firstAttribute="top" secondItem="AZN-UO-esu" secondAttribute="bottom" id="KmZ-ao-8yU"/>
+                                                <constraint firstItem="AZN-UO-esu" firstAttribute="leading" secondItem="KrN-PB-joI" secondAttribute="trailing" constant="10" id="MkV-ih-O0e"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fOQ-8J-7sS" secondAttribute="bottom" id="eGD-hd-dSV"/>
+                                                <constraint firstAttribute="topMargin" secondItem="KrN-PB-joI" secondAttribute="top" constant="3" id="nby-gf-ymh"/>
+                                                <constraint firstItem="KrN-PB-joI" firstAttribute="leading" secondItem="ZQ8-8e-MVb" secondAttribute="leadingMargin" constant="5" id="zyt-Si-Z5B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="posterLabel" destination="AZN-UO-esu" id="sTM-bk-Srw"/>
+                                            <outlet property="seenImage" destination="KrN-PB-joI" id="rKr-mM-26I"/>
+                                            <outlet property="timeLabel" destination="fOQ-8J-7sS" id="QuP-YR-Elm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1S2-kG-sJw" secondAttribute="trailing" constant="10" id="8wR-Tk-V0V"/>
+                            <constraint firstItem="OMv-Rv-I4S" firstAttribute="top" secondItem="1S2-kG-sJw" secondAttribute="bottom" constant="10" id="Z3y-S1-U9k"/>
+                            <constraint firstItem="1S2-kG-sJw" firstAttribute="top" secondItem="irX-dZ-Fdl" secondAttribute="bottom" constant="10" id="kE2-fw-htE"/>
+                            <constraint firstItem="1S2-kG-sJw" firstAttribute="leading" secondItem="tR1-xJ-gEb" secondAttribute="leadingMargin" constant="10" id="qhO-an-V5z"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iT9-eI-FEI"/>
+                    <connections>
+                        <outlet property="postsTableView" destination="1S2-kG-sJw" id="UIM-RV-g3j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiW-LT-Kvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794.4000000000001" y="-423.23838080959524"/>
+            <point key="canvasLocation" x="277.60000000000002" y="341.37931034482762"/>
         </scene>
     </scenes>
     <resources>
+        <image name="feed" width="32" height="32"/>
         <image name="goButton" width="132" height="130"/>
         <image name="post" width="32" height="32"/>
+        <image name="unread" width="79" height="79"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iTw-7O-pzC"/>
+    </inferredMetricsTieBreakers>
 </document>
