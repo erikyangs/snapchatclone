@@ -19,7 +19,7 @@ var allImages: [UIImage] = [#imageLiteral(resourceName: "cutePuppy"), #imageLite
 class ImagePost{
     let image:UIImage
     let date:NSDate
-    let seen:Bool
+    var seen:Bool
     let poster:String
     init(postImage: UIImage, postDate: NSDate, postSeen: Bool, postPoster: String) {
         self.image = postImage

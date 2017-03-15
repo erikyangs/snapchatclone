@@ -21,6 +21,7 @@
 		F14A3F1A1E78A7BA00BD94A5 /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14A3F191E78A7BA00BD94A5 /* postCell.swift */; };
 		F17E88121E7746330091FFF8 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E88111E7746330091FFF8 /* FeedsViewController.swift */; };
 		F17E88181E77DC200091FFF8 /* feedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E88171E77DC200091FFF8 /* feedCell.swift */; };
+		F1929C551E78DB7F00C4A97B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1929C541E78DB7F00C4A97B /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F14A3F191E78A7BA00BD94A5 /* postCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
 		F17E88111E7746330091FFF8 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		F17E88171E77DC200091FFF8 /* feedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedCell.swift; sourceTree = "<group>"; };
+		F1929C541E78DB7F00C4A97B /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				4196F2E21E6514EE009916E4 /* ImagePickerController.swift */,
 				F17E88111E7746330091FFF8 /* FeedsViewController.swift */,
 				F14A3F151E78A52500BD94A5 /* PostsViewController.swift */,
+				F1929C541E78DB7F00C4A97B /* ImageViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				4196F2DD1E650ECA009916E4 /* ImageFeed.swift in Sources */,
 				4196F2CB1E6509E8009916E4 /* AppDelegate.swift in Sources */,
 				F17E88181E77DC200091FFF8 /* feedCell.swift in Sources */,
+				F1929C551E78DB7F00C4A97B /* ImageViewController.swift in Sources */,
 				4196F2ED1E6609B0009916E4 /* PostNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
